@@ -11,6 +11,7 @@ setuptools = "*"
 wheel = "*"
 twine = "*"
 pydoc-utils = "*"
+beautifulsoup4 = "*"
 
 [requires]
 python_version = "3.7"
