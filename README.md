@@ -86,7 +86,7 @@ Python ByteCode is processed by Python Virtual Machine and instructions are sent
 ## Method Overriding
 * Replacing or extending the method in the base class
 
-# Empty Method
+## Empty Method
 * Must have at least one statement in a method so "pass" allows nothing to be defined
 
 ## Inheritance
@@ -101,3 +101,7 @@ Python ByteCode is processed by Python Virtual Machine and instructions are sent
 ## Package
 * A container for 1 or more modules
 * Python recognizes directory as package if __init__.py file found
+
+## DocString
+* Special format for documenting code in Python
+* Documentation should specify parameters, function purpose, return type

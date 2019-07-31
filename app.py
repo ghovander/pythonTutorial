@@ -797,9 +797,164 @@
 # print(sys.path) # All the default paths for finding the module
 
 
-from ecommerce.shopping import sales
+# from ecommerce.shopping import sales
 
 # print(dir(sales))
 # print(sales.__name__) # magic attribute that returns name of module
 # print(sales.__package__) # name of package
 # print(sales.__file__) # file address
+
+
+# from pathlib import Path
+
+# class foo:
+#     def __init__(self,p1):
+#         self.a1 = p1
+
+#     def __eq__(self, other):
+#         return self.__dict__ == other.__dict__
+
+# path1 = foo(Path(r"C:\Program Files\Microsoft"))
+# path12 = foo(Path("C:/Program Files/Microsoft"))
+# print(path1 == path12)
+# path2 = Path() # represents the current folder
+# path3 = Path("ecommerce/__init__.py")
+# path4 = Path() / "ecommerce" / "__init__.py"
+# path5 = Path.home()
+
+
+# from pathlib import Path
+
+# path = Path("ecommerce/__init__.py")
+# path.exists()
+# path.is_file()
+# path.is_dir()
+# print(path.name)
+# print(path.stem)
+# print(path.suffix)
+# print(path.parent)
+# path = path.with_name("file.txt")
+# print(path.absolute())
+# path = path.with_suffix(".txt")
+# print(path.absolute())
+
+
+# from pathlib import Path
+
+# path = Path("ecommerce")
+# # path.exists()
+# # path.mkdir()
+# # path.rmdir()
+# # path.rename("ecommerce2")
+
+# paths = [p for p in print(path.iterdir()) if p.is_dir()]
+# print(paths)
+# py_files = [p for p in path.rglob("*.py")] # used for recursive folder/file search
+# print(py_files)
+
+
+# from pathlib import Path
+# from time import ctime
+# import shutil
+
+# path = Path("ecommerce/__init__.py")
+# path.exists()
+# path.rename("init.txt")
+# path.unlink()
+# print(ctime(path.stat().st_ctime))
+
+# path.read_bytes()
+
+# print(path.read_text())
+# path.write_text("...")
+
+# source = Path("ecommerce/__init__.py")
+# target = Path() / "__init__.py"
+
+# shutil.copy(source, target)
+# target.write_text(source.read_text())
+
+
+# from pathlib import Path
+# from zipfile import ZipFile
+
+# with ZipFile("files.zip", "w") as zip:
+#     for path in Path("ecommerce").rglob("*.*"):
+#         zip.write(path)
+
+# with ZipFile("files.zip") as zip:
+#     print(zip.namelist())
+#     info = zip.getinfo("ecommerce/__init__.py")
+#     print(info.file_size)
+#     print(info.compress_size)
+#     zip.extractall("extract")
+
+
+# import csv
+
+# with open("data.csv", "w") as file:
+#     writer = csv.writer(file)
+#     writer.writerow(["transaction_id", "product_id", "price"])
+#     writer.writerow([1000, 1, 5])
+#     writer.writerow([1000, 2, 15])
+#     reader = csv.reader(file)
+#     for row in reader:
+#         print(row)
+
+
+# import json
+# from pathlib import Path
+
+# movies = [
+#     { "id": 1, "title": "Terminator", "year": 1989 },
+#     { "id": 2, "title": "Kindergarten Cop", "year": 1993 },
+# ]
+
+# data = json.dumps(movies)
+# print(data)
+# Path("movies.json").write_text(data)
+
+# data = Path("movies.json").read_text()
+# movies = json.loads(data)
+# print(movies[0]["title"])
+
+# pip commands
+# install latest version of package: pip install <package_name>
+# upgrade to latest version of existing package: pip install --upgrade <package_name>
+# show all packages with their semantic versioning: pip list
+# get specific package version: pip install <package_name>==<major.minor.patch>
+#       patch can be wildcard asterisk which will get the latest compatible version or pip install <package_name>~=<major.minor.patch>
+# uninstall package: pip install <package_name>
+
+# import requests
+
+# response = requests.get("http://google.com")
+# print(response)
+
+# virtual environment commands
+# creating virtual environment: python -m venv env
+# activate environment: env\Scripts\activate.bat
+# deactivate environment: deactivate
+
+# pipenv
+# install pipenv: pip install pipenv
+# install package: pipenv install <package_name>
+# installation location: pipenv --venv
+# activate virtual environment: pipenv shell
+# deactivate virtual environment: exit
+# install missing packages with pipenv file: pipenv install
+# install missing packages with pipenv.lock file: pipenv install --ignore-pipfile
+# view dependency tree: pipenv graph
+# uninstall package: pipenv uninstall <package_name>
+# update outdated packages (checks packages version numbers in pipfile): pipenv update --outdated
+
+# publishing packages
+# install ve packages for publishing packages: pipenv install setuptools wheel twine
+# create distribution package: python setup.py sdist bdist_wheel
+#      sdist = source distribution
+#      bdist = built distribution
+# upload sdist & bdist files to pypi: twine upload dist/*
+
+# pydoc
+# switch for creating html doc from module documentation: pydoc -w <package_name>.<module_name>
+# host documentation on port: pydoc -p 1234
