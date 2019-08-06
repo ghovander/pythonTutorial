@@ -994,20 +994,45 @@
 # print("second", duration.seconds)
 # print("total_seconds", duration.total_seconds())
 
-import random
-import string
+# import random
+# import string
 
-print(random.random())
-print(random.randint(1, 10))
-print(random.choice([1, 2, 3, 4]))
-print(random.choices([1, 2, 3, 4], k=2))
-print("".join(random.choices(string.ascii_letters + string.digits, k=4)))
+# print(random.random())
+# print(random.randint(1, 10))
+# print(random.choice([1, 2, 3, 4]))
+# print(random.choices([1, 2, 3, 4], k=2))
+# print("".join(random.choices(string.ascii_letters + string.digits, k=4)))
 
-numbers = [1, 2, 3, 4]
-random.shuffle(numbers)
-print(numbers)
+# numbers = [1, 2, 3, 4]
+# random.shuffle(numbers)
+# print(numbers)
 
-print(string.ascii_letters)
-print(string.ascii_lowercase)
-print(string.ascii_uppercase)
-print(string.digits)
+# print(string.ascii_letters)
+# print(string.ascii_lowercase)
+# print(string.ascii_uppercase)
+# print(string.digits)
+
+
+# from email.mime.multipart import MIMEMultipart
+# from email.mime.text import MIMEText
+# from email.mime.image import MIMEImage
+# from pathlib import Path
+# from string import Template
+# import smtplib
+
+# template = Template(Path("template.html").read_text())
+
+# message = MIMEMultipart()
+# message["from"] = "Mosh Hamedani"
+# message["to"] = "testmime@maildrop.cc"
+# message["subject"] = "This is a test"
+# body = template.substitute({"name": "John"})
+# message.attach(MIMEText(body, "html"))
+# message.attach(MIMEImage(Path("images/pythonImg.png").read_bytes()))
+
+# with smtplib.SMTP(host="smtp.gmail.com", port=587) as smtp:
+#     smtp.ehlo()
+#     smtp.starttls()
+#     smtp.login("testmime@maildrop.cc", "testmime")
+#     smtp.send_message(message)
+#     print("Sent...")

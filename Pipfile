@@ -13,6 +13,7 @@ twine = "*"
 pydoc-utils = "*"
 beautifulsoup4 = "*"
 pypdf2 = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.7"
