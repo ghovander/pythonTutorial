@@ -105,3 +105,10 @@ Python ByteCode is processed by Python Virtual Machine and instructions are sent
 ## DocString
 * Special format for documenting code in Python
 * Documentation should specify parameters, function purpose, return type
+
+## Command Query Separation Principle
+* Principle which states that method or function should either be a command (performs action and affects state) or query (returns response and does not alter state)
+
+## Timestamps and DateTime
+* Timestamps module will give you timestamps
+* DateTime module will give you month, day, year
